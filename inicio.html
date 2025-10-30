@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CeramicDM</title>
+    <link rel="stylesheet" href="ccsgeneral.css">
+</head>
+
+<body>
+
+    <!-- Menú Skipper -->
+    <nav class="skipper-menu">
+        <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="./buscador.html">Inventario</a></li>
+            <li><a href="./contacto.html#contacto">Contáctanos</a></li>
+            <li><a href="#sobre-nosotros">Sobre Nosotros</a></li>
+        </ul>
+    </nav>
+
+    <div id="inicio" class="contenedorTotal">
+        <div>
+
+
+
+            <!-- Contenedor central con la imagen -->
+            <h3>¡Bienvenidos a CeramicDM!</h3>
+            <br><br>
+            <div class="contenedor_central">
+               
+                <div class="carousel-container">
+                    
+                    <div class="carousel-images">
+                        <img id="imagen" src="./imagenes carrousel/setmate.jpg" alt="Imagen Ceramica" />
+
+                    </div>
+                    <button class="carousel-button" onclick="back()" id="btn-left"><img
+                            src="./imagenes carrousel/flechaizquierda.jpg" alt="Anterior"></button>
+                    <button class="carousel-button" onclick="next()" id="btn-right"><img
+                            src="./imagenes carrousel/flechaderecha.jpg" alt="Siguiente"></button>
+                </div>
+            </div>
+        </div>
+
+        <div id="recuadro-adicional_1" class="recuadro-adicional_1">
+            <div id="pedidos"> <img src="./imagenes varias/carteldepedidomasreciente.jpg" alt=""></div>
+            <div class="gallery">
+
+                <div class="muestra">
+                    <div class="piezaMuestra">
+                        <img id="imagen1" src="./imagenes carrousel/chopcervecero.jpg" alt="Imagen Ceramica" />
+                        <img id="imagen2" src="./imagenes carrousel/Compotera.jpg" alt="Imagen Ceramica" />
+                        <img id="imagen3" src="./imagenes carrousel/tazahongo.jpeg" alt="Imagen Ceramica" />
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+        <div id="sobre-nosotros" class="recuadro-sobre-nosotros">
+            <h2> ✨ Nuestra Esencia: Cerámica Hecha con el Alma</h2>
+            <p>
+                ¡Bienvenidos! Somos un <strong>nuevo emprendimiento</strong> que nace de la profunda admiración por la
+                "artesanía" y el deseo de transformar la arcilla en piezas únicas y significativas. En un mundo de
+                producción masiva, elegimos el camino lento y consciente: el de la "cerámica hecha a mano".
+            </p>
+
+            <h2>💖 ¿Qué Hacemos?</h3>
+            <p>
+                En nuestro pequeño taller, cada pieza pasa por un meticuloso proceso artesanal, desde el amasado inicial
+                hasta la cocción final. No solo creamos objetos; diseñamos "compañeros para tu día a día" que buscan
+                aportar calidez, belleza y una conexión genuina con el arte funcional.
+            </p>
+
+            <h2>🏺 Nuestros Pilares</h3>
+            <ul>
+                <li><strong>Artesanía Genuina:</strong> Garantizamos que cada cuenco, taza o jarrón es único e
+                    irrepetible, portando la huella de la mano que lo creó.</li>
+                <li><strong>Diseño Atemporal:</strong> Buscamos la belleza en la simpleza, creando diseños que son
+                    modernos, pero que perdurarán en el tiempo.</li>
+                <li><strong>Compromiso Sostenible:</strong> Nos esforzamos por usar materiales de calidad y procesos que
+                    respeten nuestro entorno.</li>
+            </ul>
+            <br>
+            <p>
+                Gracias por ser parte de este viaje. Al elegirnos, no solo adquieres una pieza de cerámica, sino que
+                apoyas un sueño que está apenas comenzando y la tradición del "hecho a mano".
+            </p>
+            </p>
+        </div>
+        <footer class="piePagina" style="margin: 1rem auto">
+            <div id="pieDePagina">
+                <a href="#"><img src="./imagenes varias/whatsapps.jpg"><span id="celu">(2657)237008 / (266)4581888</span></a>
+                
+                <a href="https://www.instagram.com/"><img src="./imagenes varias/instagram.jpg"
+                        alt="">CeramicDM</a>
+                <a href="https://es-la.facebook.com/"><img src="./imagenes varias/facebook.jpg"
+                        alt="">CeramicDM</a>
+            
+
+            </div>
+
+        </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="carrusel.js"></script> <!-- Archivo donde defines la clase Gallery -->
+    <script src="form.js"></script>
+</body>
+
+</html>

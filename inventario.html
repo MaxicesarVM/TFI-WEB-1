@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventario</title>
+    <link rel="stylesheet" href="buscador.css">
+    <link rel="stylesheet" href="ccsgeneral.css">
+    <script src="./piezas.js" id="piezas"></script>
+</head>
+
+<body>
+
+    <!-- Menú Skipper -->
+
+
+    <nav class="skipper-menu">
+
+        <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="./buscador.html">Inventario</a></li>
+            <li><a href="./contacto.html#contacto">Contáctanos</a></li>
+            <li><a href="#sobre-nosotros">Sobre Nosotros</a></li>
+        </ul>
+    </nav>
+    <div>
+        <h1>Cada pieza esta hecha con amor</h1>
+    </div>
+
+    <div id="buscador" class="seccion">
+        <div class="seccion_eleccion">
+            <label for="tipo">Tipo:</label>
+            <select id="tipo">
+                <option value="todo">Todo</option>
+                <option value="Taza y derivados">Tazas y derivados</option>
+                <option value="Platos y derivados">Platos y derivados</option>
+                <option value="otros">Otros</option>
+            </select>
+            <button class="order-button" onclick="buscaPieza()">Buscar</button>
+        </div>
+    </div>
+    <div class="contenedor">
+        <div class="contenedor_imagen" id="piezaContainer"></div>
+    </div>
+    <script src="buscador.js"></script>
+
+
+
+</body>
+
+</html>
