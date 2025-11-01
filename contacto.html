@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="ccsgeneral.css">
+    <title>Contacto</title>
+
+</head>
+
+<body>
+
+    <nav class="menu">
+        <ul>
+            <li><a href="./inicio.html">Inicio</a></li>
+            <li><a href="./inventario.html">Inventario</a></li>
+            <li><a href="./contacto.html">Contáctanos</a></li>
+            <li><a href="./inicio.html#sobre-nosotros">Sobre Nosotros</a></li>
+        </ul>
+    </nav>
+
+    <div id="contacto" class="contacto">
+        <div class="formulario">
+            <form action="#" id="formulario" novalidate>
+                <h2>¿Quieres una pieza unica y perzonalizada?</h2>
+                <h3>Cuentanos de vos, que te gustaria que detalles pueden tener tu pieza, tamaño, color y forma</h3>
+
+                <div class="contenedor-formulario">
+
+                    <div class="lado-izquierdo">
+                        <div>
+                            <label for="nombre">Nombre</label>
+                            <input type="text" autocomplete="off" id="nombre" required />
+                            <span id="errorNombre" class="error" style="display: none;">Nombre no valido, solo letras,
+                                hasta 30 caracteres</span>
+                        </div>
+                        <div>
+                            <label for="apellido">Apellido</label>
+                            <input type="text" autocomplete="off" id="apellido" required />
+                            <span id="errorApellido" class="error" style="display: none;">Apellido no valido, solo
+                                letras, hasta 30 caracteres</span>
+                        </div>
+                        <div>
+                            <label for="telefono">Teléfono</label>
+                            <input type="text" autocomplete="off" id="telefono" required />
+                            <span id="errorTelefono" class="error" style="display: none;">Ingrese telefono sin "0" ni
+                                "15"</span>
+                        </div>
+                        <div>
+                            <label for="correo">Correo Electronico</label>
+                            <input type="email" autocomplete="off" id="correo" required />
+                            <span id="errorEmail" class="error" style="display: none;">Correo inválido, ejemplo
+                                "usuario@gmail.com"</span>
+                        </div>
+
+                    </div>
+
+                    
+                    <div class="cuadro-area">
+                        <label for="descripcion">Ingresa descripción de que tipo de pieza le gustaria que realicemos para usted💖</label>
+                        <textarea id="descripcion" autocomplete="none"
+                            placeholder="Ingresa toda la informacion necesaria para poder realizar su pieza unica"
+                            required></textarea>
+                        <span id="errorDescripcion" class="error" style="display: none;">Minimo 30, Maximo 700
+                            caracteres </span>
+                        <div id="contadorObtenerID">
+                            <button type="submit" id="enviar">Enviar</button>
+                            <span id="contador">0/700 caracteres</span>
+
+
+                        </div>
+
+                    </div>
+
+                    <div id="divCreado" style="display: none;">
+                        <h3 class="divC">Mensaje</h3>
+                    </div>
+
+                </div>
+
+            </form>
+        </div>
+    </div>
+
+
+       <script src="form.js"></script>
+
+</body>
+
+</html>

@@ -18,7 +18,7 @@ formulario.addEventListener('submit', function (e) {
     const nombreExp = /^[a-zA-ZÀ-ÿ\s]+$/;
     const emailExp = /^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/; 
 
-    // Validación del nombre  
+
     if (nombre.value.trim() === '' || !nombreExp.test(nombre.value) || nombre.value.length > 30) {  
         document.getElementById('errorNombre').style.display = 'inline'; 
         nombre.value = ""; 
@@ -43,16 +43,15 @@ formulario.addEventListener('submit', function (e) {
     } else {  
         document.getElementById('errorTelefono').style.display = 'none';  
     }  
-     // Validación de la descripción
      const longitudActual = descripcion.value.length;
-     if (longitudActual> maxLength || longitudActual<100) {
+     if (longitudActual> maxLength || longitudActual<30) {
          document.getElementById('errorDescripcion').style.display = 'inline'; 
          valid = false;  
      } else {
          document.getElementById('errorDescripcion').style.display = 'none';  
      }
     
-    // Validación del correo  
+
      
     if (correo.value.trim() === "" || !emailExp.test(correo.value)) {  
         document.getElementById('errorEmail').style.display = 'inline'; 
@@ -62,13 +61,13 @@ formulario.addEventListener('submit', function (e) {
         document.getElementById('errorEmail').style.display = 'none';  
     }  
 
-    // Si todos son válidos, enviar el formulario  
+ 
     if (valid) {  
         confirmarEnvio(nombre.value, apellido.value, telefono.value, descripcion.value, correo.value);  
         alert("Formulario enviado correctamente");
         formulario.reset();  
         document.getElementById("divCreado").style.display = 'block'; 
-        contador.textContent = ""; // Reiniciar el contador 
+        contador.textContent = "";  
         botonEnviar.disabled = true;
         botonEnviar.textContent = 'Enviado';
         botonEnviar.style.backgroundColor = "#455741";
@@ -76,25 +75,25 @@ formulario.addEventListener('submit', function (e) {
     }  
 });  
 
-// Confirmar envío de datos  
+ 
 function confirmarEnvio(nombre, apellido, telefono,descripcion, correo) {  
     const reseñasDiv = document.getElementById("divCreado")  
     const reseñaDiv = document.createElement('div');  
-    let idTorta;
+    let idPieza;
 
     reseñaDiv.classList.add('divCreado'); 
-    //obtener ID Torta
-    const params = new URLSearchParams(window.location.search);
-    idTorta = params.get('id');
 
-    if (idTorta) {
+    const params = new URLSearchParams(window.location.search);
+    idPieza = params.get('id');
+
+    if (idPieza) {
 
         reseñaDiv.innerHTML = 
-            `<p id="textoDiv"> ${nombre} ${apellido} Gracias por ponerte en contacto con "TortasAmanda".   
-            En breve nos comunicaremos al ${telefono} o bien al correo ${correo}. Torta de interes con ID = ${idTorta}</p>`;
+            `<p id="textoDiv"> ${nombre} ${apellido} Gracias por ponerte en contacto con "Ceramica DM".   
+            En breve nos comunicaremos al ${telefono} o bien al correo ${correo}. Pieza de interes con ID = ${idPieza}</p>`;
     }  else{
         reseñaDiv.innerHTML = 
-            `<p id="textoDiv"> ${nombre} ${apellido} Gracias por ponerte en contacto con "TortasAmanda".   
+            `<p id="textoDiv"> ${nombre} ${apellido} Gracias por ponerte en contacto con "Ceramica DM".   
             En breve nos comunicaremos al ${telefono} o bien al correo ${correo}.</p>`;
     }
 
@@ -102,9 +101,9 @@ function confirmarEnvio(nombre, apellido, telefono,descripcion, correo) {
 }
 
 descripcion.addEventListener('input', function() {
-    const longitud = descripcion.value.length; // Obtener longitud actual
-    const caracteresRestantes = maxLength - longitud; // Calcular caracteres restantes
-    contador.textContent = `${caracteresRestantes}/${maxLength} caracteres`; // Actualiza el contador
+    const longitud = descripcion.value.length; 
+    const caracteresRestantes = maxLength - longitud; 
+    contador.textContent = `${caracteresRestantes}/${maxLength} caracteres`;
 
     if (longitud > maxLength) {
         document.getElementById('errorDescripcion').style.display = 'inline';
